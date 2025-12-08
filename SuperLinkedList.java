@@ -34,6 +34,17 @@ public class SuperLinkedList extends LinkedList<String> {
     }
 
     public LinkedList<String> removeDuplicates() {
+        ListIterator <String> iter1 = this.listIterator(); 
+        LinkedList <String> removed = new LinkedList <String>(); 
+        int one = 0; 
+
+        while(iter1.hasNext()){
+            String e = iter.next(); 
+            LinkedList <String> iter2 = new LinkedList <String>(); 
+            
+        }
+
+
         return null;
     }
 
