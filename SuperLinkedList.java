@@ -39,16 +39,27 @@ public class SuperLinkedList extends LinkedList<String> {
         int one = 0; 
 
         while(iter1.hasNext()){
-            String e = iter.next(); 
-            LinkedList <String> iter2 = new LinkedList <String>(); 
+            String e = iter1.next(); 
+            ListIterator <String> iter2 = this.listIterator(); 
+            int two = 0; 
+
+            while(iter2.hasNext()){
+                if(!(two == one) && e.equals(iter2.next()))
+                    removed.add(e);
+                two++;
+            one++;
+            }
+
+
             
         }
-
-
-        return null;
+        return removed;
     }
 
     public LinkedList<String> concatenateStrings() {
+        LinkedList <String> concatenate = new LinkedList <String>();
+
+
 
         return null;
     }
@@ -59,7 +70,13 @@ public class SuperLinkedList extends LinkedList<String> {
     }
 
     public String toString() {
-
-        return "";
+    ListIterator <String> iter = this.listIterator(); 
+    String current = ""; 
+    while(iter.hasNext()){
+        current += iter.next(); 
+        if(iter.hasNext())
+                current += ", ";
+    }
+        return current;
     }
 } // end SuperLinkedList
